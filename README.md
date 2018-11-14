@@ -1,2 +1,2 @@
 # ellix-blog
-Ellix's personal technology blog
+Ellix's personal technology blog...
