@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta name="description" content="The Page Description">
 		<style type="text/css">@-ms-viewport{width: device-width;}</style>
-		<title>Ellie - deep learning</title>
+		<title>Ellie - {{ category }} </title>
 		<link rel="stylesheet" href="{% static 'css/layers.min.css' %}" media="screen">
 		<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" media="screen">
 		<link rel="stylesheet" href="{% static 'style.css' %}" media="screen">
@@ -39,10 +39,10 @@
 							<li class="menu-item">
 								<a href="{% url 'index' %}">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'python'%}">Python</a></li>
-									<li><a href="{% url 'net'%}">.Net</a></li>
-									<li><a href="{% url 'deep_learning'%}">Deep Learning</a></li>
-									<li><a href="{% url 'personal'%}">Personal</a></li>
+									<li><a href="{% url 'category/python'%}">Python</a></li>
+									<li><a href="{% url 'category/net'%}">.Net</a></li>
+									<li><a href="{% url 'category/deep_learning'%}">Deep Learning</a></li>
+									<li><a href="{% url 'category/personal'%}">Personal</a></li>
 								</ul>
 							</li>
 							<li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
@@ -73,7 +73,7 @@
 									<figure><img src="{% static 'img/rabbit.jpg' %}" alt=""></figure>
 								</div><!-- column three -->
 								<div class="column nine last">
-									<h2><a href="{% url 'article_deep_learning' id=article.id %}">{{ article.title }}</a></h2>
+									<h2><a href="{% url 'article' category=category id=article.id %}">{{ article.title }}</a></h2>
 										<h5 class="meta-post"><a href="#">learn</a>, <a href="#">Design</a> - <time datetime="2013-11-10">{{ article.date }}</time></h5>
 									<p> {{ article.main_content }}</p>
 								</div><!-- column nine -->
@@ -162,6 +162,5 @@
 		<script src="{% static 'js/beetle.js' %}"></script>
 
 	</body>
-
 
 </html>

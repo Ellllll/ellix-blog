@@ -22,13 +22,6 @@ from . import view
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', view.index,name='index' ),
-    url(r'^python$',view.python,name='python'),
-    url(r'^.net$',view.net,name='net'),
-    url(r'^deep_learning$',view.deep_learning,name='deep_learning'),
-    url(r'^personal$',view.personal,name='personal'),
-    url(r'^contact$',view.contact,name='contact'),
-    url(r'^python_(?P<id>\d+)/$', view.article_python, name='article_python'),
-    url(r'^.net_(?P<id>\d+)/$', view.article_net, name='article_net'),
-    url(r'^personal_(?P<id>\d+)/$', view.article_personal, name='article_personal'),
-    url(r'^deep_learning_(?P<id>\d+)/$', view.article_deep_learning, name='article_deep_learning'),
+    url(r'^category/(?P<category>.+)$',view.category,name='category'),
+    url(r'^article/(.+)/([0-9]+)$',view.article,name='article'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
