@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 
 class Article(models.Model):
-    category = models.CharField(20)
+    category = models.CharField(max_length=20)
     title = models.CharField(max_length=50)
     main_content = models.CharField(max_length=50, default="")
     content = models.TextField()
