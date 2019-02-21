@@ -39,10 +39,10 @@
 							<li class="menu-item">
 								<a href="{% url 'index' %}">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'category/python'%}">Python</a></li>
-									<li><a href="{% url 'category/net'%}">.Net</a></li>
-									<li><a href="{% url 'category/deep_learning'%}">Deep Learning</a></li>
-									<li><a href="{% url 'category/personal'%}">Personal</a></li>
+									<li><a href="{% url 'cat' category='python' %}">Python</a></li>
+									<li><a href="{% url 'cat' category='.net' %}">.Net</a></li>
+									<li><a href="{% url 'cat' category='deep_learning' %}">Deep Learning</a></li>
+									<li><a href="{% url 'cat' category='personal' %}">Personal</a></li>
 								</ul>
 							</li>
 							<li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
