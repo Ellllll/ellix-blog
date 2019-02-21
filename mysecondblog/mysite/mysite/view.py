@@ -15,5 +15,5 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 def article(request,category,id):
-    article = models.Article_python.objects.filter(category=category,id=id)
+    article = models.Article.objects.filter(category=category,id=id)
     return render(request, 'single-blog-post-sidebar.html', {'article': article})

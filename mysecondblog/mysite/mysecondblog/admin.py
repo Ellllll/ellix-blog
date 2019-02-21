@@ -1,7 +1,6 @@
 from django.contrib import admin
 
-from models import Article_python,Article_net,Article_personal,Article_deep_learning
-
+from models import Article
 
 class ArticleAdmin(admin.ModelAdmin):
 
@@ -16,8 +15,5 @@ class ArticleAdmin(admin.ModelAdmin):
 
 
 # Register your models here.
-admin.site.register(Article_python, ArticleAdmin)
-admin.site.register(Article_net, ArticleAdmin)
-admin.site.register(Article_deep_learning, ArticleAdmin)
-admin.site.register(Article_personal, ArticleAdmin)
+admin.site.register(Article, ArticleAdmin)
 

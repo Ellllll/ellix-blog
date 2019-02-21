@@ -39,10 +39,10 @@
 							<li class="menu-item">
 								<a href="{% url 'index' %}">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'category/python'%}">Python</a></li>
-									<li><a href="{% url 'category/net'%}">.Net</a></li>
-									<li><a href="{% url 'category/deep_learning'%}">Deep Learning</a></li>
-									<li><a href="{% url 'category/personal'%}">Personal</a></li>
+									<li><a href="{% url 'cat' category='python' %}">Python</a></li>
+									<li><a href="{% url 'cat' category='.net' %}">.Net</a></li>
+									<li><a href="{% url 'cat' category='deep_learning' %}">Deep Learning</a></li>
+									<li><a href="{% url 'cat' category='personal' %}">Personal</a></li>
 								</ul>
 							</li>
 							<li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
@@ -56,10 +56,10 @@
 			<div id="intro-wrap">
 				<div id="intro" class="preload darken" data-autoplay="5000" data-navigation="true" data-pagination="true" data-transition="fadeUp">
 					<div class="intro-item" style="background-image: url(/static/img/feather.jpg);">
-						<div class="caption">
+						<div class="caption" style="top: 40%;">
 							<h2>Ellie</h2>
 							<p>Ellie's blog</p>
-							<a class="button white transparent" href="{% url 'article_personal' 1 %}">Read More</a>
+							<!--<a class="button white transparent" href="{% url 'article' category=category 1 %}">Read More</a>-->
 						</div><!-- caption -->
 
 					</div>
