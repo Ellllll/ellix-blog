@@ -23,6 +23,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', view.index,name='index' ),
     url(r'^category/(?P<category>.+)$',view.category,name='category'),
-    url(r'^article/(.+)/([0-9]+)$',view.article,name='article'),
+    url(r'^article/(?P<category>.+)/(?P<id>[0-9]+)$',view.article,name='article'),
     url(r'^contact/$', view.contact,name='contact')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

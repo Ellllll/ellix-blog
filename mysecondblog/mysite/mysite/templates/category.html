@@ -39,10 +39,9 @@
 							<li class="menu-item">
 								<a href="{% url 'index' %}">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'category/python'%}">Python</a></li>
-									<li><a href="{% url 'category/net'%}">.Net</a></li>
-									<li><a href="{% url 'category/deep_learning'%}">Deep Learning</a></li>
-									<li><a href="{% url 'category/personal'%}">Personal</a></li>
+									<li><a href="{% url 'category' category='python' %}">Python</a></li>
+									<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+									<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 								</ul>
 							</li>
 							<li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
@@ -130,10 +129,9 @@
 						<div class="widget column three">
 							<h4>Archives</h4>
 							<ul class="plain">
-								<li><a href="{% url 'python'%}">Python</a></li>
-								<li><a href="{% url 'net'%}">.Net</a></li>
-								<li><a href="{% url 'deep_learning'%}">Deep Learning</a></li>
-								<li><a href="{% url 'personal'%}">Personal</a></li>
+								<li><a href="{% url 'category' category='python' %}">Python</a></li>
+								<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+								<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 							</ul>
 						</div>
 						<div class="widget column three">

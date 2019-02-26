@@ -1,0 +1,5 @@
+NAME = 'web'
+USER = 'ellie'
+PASSWORD = 'qwertyuu'
+HOST = '39.108.122.78'
+PORT = '3306'

@@ -39,10 +39,9 @@
 							<li class="menu-item">
 								<a href="{% url 'index' %}">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'cat' category='python' %}">Python</a></li>
-									<li><a href="{% url 'cat' category='.net' %}">.Net</a></li>
-									<li><a href="{% url 'cat' category='deep_learning' %}">Deep Learning</a></li>
-									<li><a href="{% url 'cat' category='personal' %}">Personal</a></li>
+									<li><a href="{% url 'category' category='python' %}">Python</a></li>
+									<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+									<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 								</ul>
 							</li>
 							<li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
@@ -55,7 +54,7 @@
 		<main role="main">
 			<div id="intro-wrap" class="full-height">
 				<div id="intro" class="preload darken more-button">
-					<div class="intro-item" style="background-image: url({{ article.image.url }});">
+					<div class="intro-item" style="background-image: url(/static/img/feather.jpg);">
 					</div>
 				</div><!-- intro -->				
 			</div><!-- intro-wrap -->
@@ -250,10 +249,9 @@
 						<div class="widget column three">
 							<h4>Archives</h4>
 							<ul class="plain">
-								<li><a href="{% url 'python'%}">Python</a></li>
-								<li><a href="{% url 'net'%}">.Net</a></li>
-								<li><a href="{% url 'deep_learning'%}">Deep Learning</a></li>
-								<li><a href="{% url 'personal'%}">Personal</a></li>
+								<li><a href="{% url 'category' category='python' %}">Python</a></li>
+								<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+								<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 							</ul>
 						</div>
 						<div class="widget column three">

@@ -39,10 +39,9 @@
 							<li class="menu-item">
 								<a href="{% url 'index' %}">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'python'%}">Python</a></li>
-									<li><a href="{% url 'net'%}">.Net</a></li>
-									<li><a href="{% url 'deep_learning'%}">Deep Learning</a></li>
-									<li><a href="{% url 'personal'%}">Personal</a></li>
+									<li><a href="{% url 'category' category='python' %}">Python</a></li>
+									<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+									<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 								</ul>
 							</li>
 							<li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
@@ -55,7 +54,7 @@
 		<main role="main">
 			<div id="intro-wrap" class="">
 				<div id="intro" class="preload darken more-button">					
-					<div class="map" data-maplat="51.511214" data-maplon="-0.119824" data-mapzoom="7" data-color="aqua" data-height="300" data-img="img/marker.png" data-info="I am based in London, UK"></div>							
+					<div class="map" data-maplat="23.411214" data-maplon="113.285" data-mapzoom="7" data-color="aqua" data-height="300" data-img="img/marker.png" data-info="I am based in Guangzhou, CN"></div>
 				</div><!-- intro -->
 			</div><!-- intro-wrap -->
 
@@ -117,10 +116,9 @@
 						<div class="widget column three">
 							<h4>Archives</h4>
 							<ul class="plain">
-								<li><a href="{% url 'python'%}">Python</a></li>
-								<li><a href="{% url 'net'%}">.Net</a></li>
-								<li><a href="{% url 'deep_learning'%}">Deep Learning</a></li>
-								<li><a href="{% url 'personal'%}">Personal</a></li>
+								<li><a href="{% url 'category' category='python' %}">Python</a></li>
+								<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+								<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 							</ul>
 						</div>
 						<div class="widget column three">
@@ -144,7 +142,7 @@
 		</footer>
 
 		<script src="https://code.jquery.com/jquery.js"></script>
-		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>		
+		<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 		<script src="{% static 'js/plugins.js' %}"></script>
 		<script src="{% static 'js/beetle.js' %}"></script>
 		<!--script>

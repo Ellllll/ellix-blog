@@ -39,13 +39,12 @@
 							<li class="menu-item">
 								<a href="{% url 'index' %}">Blog</a>
 								<ul class="sub-menu">
-									<li><a href="{% url 'category/python'%}">Python</a></li>
-									<li><a href="{% url 'category/net'%}">.Net</a></li>
-									<li><a href="{% url 'category/deep_learning'%}">Deep Learning</a></li>
-									<li><a href="{% url 'category/personal'%}">Personal</a></li>
+									<li><a href="{% url 'category' category='python' %}">Python</a></li>
+									<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+									<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 								</ul>
 							</li>
-							<li class="menu-item"><a href="{% url 'contact/' %}">Contact</a></li>
+							<li class="menu-item"><a href="{% url 'contact' %}">Contact</a></li>
 						</ul>
 					</nav>
 				</div><!-- row-content -->
@@ -59,7 +58,7 @@
 						<div class="caption" style="top: 40%;">
 							<h2>Ellie</h2>
 							<p>Ellie's blog</p>
-							<!--<a class="button white transparent" href="{% url 'article' category=category 1 %}">Read More</a>-->
+							<a class="button white transparent" href="{% url 'article' category='personal' id=1 %}">Read More</a>
 						</div><!-- caption -->
 
 					</div>
@@ -143,7 +142,7 @@
 						<div class="section-title"><h3>Latest News</h3></div>
 						<div class="grid-items blog-section masonry-style preload">
 							<article class="item column six">
-								<a href="{% url 'article_personal' 1 %}">
+								<a href="{% url 'article' category='personal' id=1 %}">
 									<figure><img src="/media/uploadImage/翼年代记.jpg" alt=""><span class="blog-overlay"><i class="icon icon-doc"></i></span></figure>
 									<div class="blog-excerpt">
 										<div class="blog-excerpt-inner">
@@ -290,10 +289,9 @@
 						<div class="widget column three">
 							<h4>Archives</h4>
 							<ul class="plain">
-								<li><a href="{% url 'python'%}">Python</a></li>
-								<li><a href="{% url 'net'%}">.Net</a></li>
-								<li><a href="{% url 'deep_learning'%}">Deep Learning</a></li>
-								<li><a href="{% url 'personal'%}">Personal</a></li>
+								<li><a href="{% url 'category' category='python' %}">Python</a></li>
+								<li><a href="{% url 'category' category='deep_learning' %}">Deep Learning</a></li>
+								<li><a href="{% url 'category' category='personal' %}">Personal</a></li>
 							</ul>
 						</div>
 						<div class="widget column three">
